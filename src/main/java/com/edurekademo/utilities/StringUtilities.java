@@ -133,11 +133,11 @@ public class StringUtilities {
 
 		Class<?> finalClass = null ;
 		//If value or type passed is null or empty or string return back value as such
-		if ((value == null) || value.isEmpty() || types == null || types.isEmpty() || types.equalsIgnoreCase(STRING_TYPE))  return value;
+		if ((value == null) || value.isEmpty() || types == null || types.isEmpty() || STRING_TYPE.equalsIgnoreCase(types))  return value;
 
 		String type = types.toLowerCase();
 		
-		if (type.equals(DATE_TYPE)) return convertStringToDate(value);	
+		if (DATE_TYPE.equals(type)) return convertStringToDate(value);	
 		
 		//Based on the passed type load the wrapper class. 
 		//If the given type not permitted returns values as such
