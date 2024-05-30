@@ -181,19 +181,19 @@ public class GenericComparator implements Comparator, Serializable {
 		}
 		int acutal = LESSER;
 		 
-			if (obj.equals(DATATYPE_INTEGER)) {
+			if (DATATYPE_INTEGER.equals(obj)) {
 				acutal = ((Integer) v1).compareTo((Integer) v2) * determinePosition();
-			} else if (obj.equals(DATATYPE_LONG)) {
+			} else if (DATATYPE_LONG.equals(obj)) {
 				acutal = ((Long) v1).compareTo((Long) v2) * determinePosition();
-			} else if (obj.equals(DATATYPE_STRING)) {
+			} else if (DATATYPE_STRING.equals(obj)) {
 				acutal = ((String) v1).compareTo((String) v2) * determinePosition();
-			} else if (obj.equals(DATATYPE_DATE)) {
+			} else if (DATATYPE_DATE.equals(obj)) {
 				acutal = ((Date) v1).compareTo((Date) v2) * determinePosition();
-			} else if (obj.equals(DATATYPE_FLOAT)) {
+			} else if (DATATYPE_FLOAT.equals(obj)) {
 				acutal = ((Float) v1).compareTo((Float) v2) * determinePosition();
-			} else if (obj.equals(DATATYPE_DOUBLE)) {
+			} else if (DATATYPE_DOUBLE.equals(obj)) {
 				acutal = ((Double) v1).compareTo((Double) v2) * determinePosition();
-			} else if (obj.equals(DATATYPE_BOOLEAN)) {
+			} else if (DATATYPE_BOOLEAN.equals(obj)) {
 				acutal = ((Boolean) v1).compareTo((Boolean) v2) * determinePosition();
 			}
 			return acutal;
